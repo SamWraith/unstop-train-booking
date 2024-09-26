@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
 
   getSeats() {
-    this.http.get<any[]>('http://localhost:3000/api/v1/seats').subscribe(data => {
+    this.http.get<any[]>('https://unstop-train-booking-api.vercel.app/api/v1/seats').subscribe(data => {
       this.seats = data;
     });
   }
@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
       return;
     }
 
-    this.http.post('http://localhost:3000/api/v1/seats/book-seats', { numberOfSeats: this.numberOfSeats })
+    this.http.post('https://unstop-train-booking-api.vercel.app/api/v1/seats/book-seats', { numberOfSeats: this.numberOfSeats })
       .subscribe(
         (response: any) => {
           alert(`Booked seats: ${response.seats.join(', ')}`);
