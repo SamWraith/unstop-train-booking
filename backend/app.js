@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { bookSeats, getSeats, initializeSeats } from "./controllers/seat.contoller.js";
+
 
 
 
